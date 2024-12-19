@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import MainMenu from "./pages/MainMenu";
 import MeetingMode from "./pages/MeetingMode";
 import About from "./pages/About";
+import MinutesHistory from "./pages/MinutesHistory";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/menu" element={<MainMenu />} />
         <Route path="/meeting-mode" element={<MeetingMode />} />
         <Route path="/about" element={<About />} />
+        <Route path="/minutes-history" element={<MinutesHistory />} />
       </Routes>
     </Router>
   );
