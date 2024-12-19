@@ -20,6 +20,16 @@ button:hover {
   transform: scale(1.05);
 }
 
+input {
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.02);
+  border-color: #3b82f6;
+}
+
+
 
 @tailwind base;
 @tailwind components;

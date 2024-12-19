@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Home() {
+  const navigate = useNavigate(); // Hook para manejar la navegación
+
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <Header />
@@ -32,10 +35,16 @@ function Home() {
                 Bienvenido
               </h2>
               <div className="space-y-4">
-                <button className="w-full bg-white text-blue-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100">
+                <button
+                  className="w-full bg-white text-blue-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100"
+                  onClick={() => navigate("/login")} // Navega a la página de Login
+                >
                   Iniciar Sesión
                 </button>
-                <button className="w-full bg-white text-blue-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100">
+                <button
+                  className="w-full bg-white text-blue-800 py-2 px-4 rounded-lg font-semibold hover:bg-gray-100"
+                  onClick={() => navigate("/register")} // Navega a la página de Registro
+                >
                   Crear Cuenta Nueva
                 </button>
               </div>
